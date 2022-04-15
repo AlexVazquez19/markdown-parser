@@ -18,7 +18,9 @@ public class MarkdownParse {
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
             if (exclamationPoint != openBracket - 1 && openParen == closeBracket + 1) {
-                toReturn.add(markdown.substring(openParen + 1, closeParen));
+                if (markdown.substring(openParen + 1, closeParen).contains(" ") == false) {
+                    toReturn.add(markdown.substring(openParen + 1, closeParen));
+                }
             }
             currentIndex = closeParen + 1;   
         }
