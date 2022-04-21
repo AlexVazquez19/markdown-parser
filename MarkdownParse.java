@@ -15,7 +15,7 @@ public class MarkdownParse {
             int openBracket = markdown.indexOf("[", currentIndex);
             int exclamationPoint = markdown.indexOf("!",currentIndex);
             int closeBracket = markdown.indexOf("]", openBracket);
-            int openParen = markdown.indexOf("(", closeBracket);
+            int openParen = markdown.indexOf("(", currentIndex);
             int closeParen = markdown.indexOf(")", openParen);
             if (exclamationPoint != openBracket - 1 && openParen == closeBracket + 1) {
                 if (markdown.substring(openParen + 1, closeParen).contains(" ") == false) {
