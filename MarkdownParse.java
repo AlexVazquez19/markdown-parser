@@ -15,7 +15,7 @@ public class MarkdownParse {
             int openBracket = markdown.indexOf("[", currentIndex);
             int exclamationPoint = markdown.indexOf("!",currentIndex);
             int closeBracket = markdown.indexOf("]", openBracket);
-            int openParen = markdown.indexOf("(", currentIndex);
+            int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
             if (exclamationPoint != openBracket - 1 && openParen == closeBracket + 1) {
                 if (markdown.substring(openParen + 1, closeParen).contains(" ") == false) {
@@ -24,7 +24,6 @@ public class MarkdownParse {
             }
             currentIndex = closeParen + 1;   
         }
-
         return toReturn;
     }
 
@@ -34,5 +33,7 @@ public class MarkdownParse {
         String content = Files.readString(fileName);
         ArrayList<String> links = getLinks(content);
 	    System.out.println(links);
+
+        System.out.println("print statement");
     }
 }

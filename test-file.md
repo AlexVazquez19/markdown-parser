@@ -1,2 +1,4 @@
-[a link!](https://something.com)
-[this is not a link!](some-page.html)
+# Title
+
+[link1](https://something.com)
+[link2](some-thing.html)
