@@ -22,7 +22,7 @@ public class MarkdownParseTest {
 
     @Test
     public void testGetLinks2() throws IOException {
-        assertEquals(List.of("https://something.com","some-thing.html"),
+        assertEquals(List.of("https://something.com","some-page.html"),
             MarkdownParse.getLinks(Files.readString(Path.of("test-file2.md"))));
     }
 
@@ -34,8 +34,32 @@ public class MarkdownParseTest {
 
     @Test
     public void testGetLinks4() throws IOException {
-        assertEquals(List.of("google.com"),
+        assertEquals(List.of(),
             MarkdownParse.getLinks(Files.readString(Path.of("test-file4.md"))));
+    }
+
+    @Test
+    public void testGetLinks5() throws IOException {
+        assertEquals(List.of(),
+            MarkdownParse.getLinks(Files.readString(Path.of("test-file5.md"))));
+    }
+
+    @Test
+    public void testGetLinks6() throws IOException {
+        assertEquals(List.of(),
+            MarkdownParse.getLinks(Files.readString(Path.of("test-file6.md"))));
+    }
+
+    @Test
+    public void testGetLinks7() throws IOException {
+        assertEquals(List.of(),
+            MarkdownParse.getLinks(Files.readString(Path.of("test-file7.md"))));
+    }
+
+    @Test
+    public void testGetLinks8() throws IOException {
+        assertEquals(List.of(),
+            MarkdownParse.getLinks(Files.readString(Path.of("test-file8.md"))));
     }
 }
 
