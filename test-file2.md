@@ -3,4 +3,9 @@
 [a link!](https://something.com)
 [another link!](some-page.html)
 
-some paragraph text after the links
+[not link]
+
+
+(this is not a link)
+
+
